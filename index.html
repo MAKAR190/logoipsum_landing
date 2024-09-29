@@ -11,48 +11,8 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontSize: {
-              headline1: "48px",
-              headline2: "40px",
-              headline3: "36px",
-              headline4: "24px",
-              copy: "18px",
-            },
-            colors: {
-              primary: {
-                darkblack: "#0C0C0D",
-                blue: "#164CD8",
-                white: "#FAFAFA",
-              },
-              secondary: {
-                lightgrey: "#EAEAEA",
-                darkgrey: "#9F9F9F",
-                greyblue: "#545989",
-                lightblue: "#F0F4FD",
-              },
-            },
-            boxShadow: {
-              custom: "0px 4px 5px 0px rgba(0, 0, 0, 0.1)",
-              customblue: "0px 4px 4px 0px #164CD81A",
-              customhero: "0px 4px 10px 0px rgba(0, 0, 0, 0.1)",
-              customwhywe: "0px 4px 10px 0px rgba(0, 0, 0, 0.05)",
-              custominput: "0px 4px 10px 0px rgba(0, 0, 0, 0.25)",
-            },
-          },
-        },
-      };
-    </script>
+    <link rel="stylesheet" href="./styles/output.css" />
     <title>Logoipsum</title>
-    <style>
-      html {
-        scroll-behavior: smooth;
-      }
-    </style>
   </head>
   <body class="m-0 p-[60px] bg-primary-white">
     <header class="flex w-full items-center justify-between">
@@ -100,21 +60,25 @@
     <main>
       <section id="hero" class="my-[120px]">
         <div
+          id="button1"
           class="bg-[#3D11BB] absolute left-[114px] top-[328px] w-fit text-primary-white py-[10px] px-[24px] rounded-[16px] shadow-customhero leading-[21.94px] font-[Montserrat] font-medium text-copy"
         >
           Website
         </div>
         <div
+          id="button2"
           class="bg-[#358751] absolute left-[158px] top-[451px] w-fit text-primary-white py-[10px] px-[24px] rounded-[16px] shadow-customhero leading-[21.94px] font-[Montserrat] font-medium text-copy"
         >
           Email
         </div>
         <div
+          id="button3"
           class="bg-[#2554B1] absolute w-fit right-[177px] top-[354px] text-primary-white py-[10px] px-[24px] rounded-[16px] shadow-customhero leading-[21.94px] font-[Montserrat] font-medium text-copy"
         >
           Blog
         </div>
         <div
+          id="button4"
           class="bg-[#EE9818] absolute w-fit right-[149px] top-[449px] text-primary-white py-[10px] px-[24px] rounded-[16px] shadow-customhero leading-[21.94px] font-[Montserrat] font-medium text-copy"
         >
           Social media
@@ -645,14 +609,16 @@
       </div>
       <div class="grid grid-cols-2 mt-[56px]">
         <div class="w-[60%]">
-          <img
-            src="assets/Logo_main.webp"
-            alt="logoipsum"
-            title="logoipsum"
-            class="mb-[36px]"
-            width="197"
-            height="40"
-          />
+          <a href="#hero">
+            <img
+              src="assets/Logo_main.webp"
+              alt="logoipsum"
+              title="logoipsum"
+              class="mb-[36px]"
+              width="197"
+              height="40"
+            />
+          </a>
           <p
             class="text-copy text-secondary-greyblue font-[Montserrat] font-medium leading-[21.94px]"
           >
@@ -685,6 +651,8 @@
         </div>
       </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="js/index.js"></script>
   </body>
 </html>
