@@ -3,291 +3,684 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Put your description here" />
     <link rel="icon" href="assets/favicon.ico" type="image/ico" sizes="32x32" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         theme: {
-          extend: {},
+          extend: {
+            fontSize: {
+              headline1: "48px",
+              headline2: "40px",
+              headline3: "36px",
+              headline4: "24px",
+              copy: "18px",
+            },
+            colors: {
+              primary: {
+                darkblack: "#0C0C0D",
+                blue: "#164CD8",
+                white: "#FAFAFA",
+              },
+              secondary: {
+                lightgrey: "#EAEAEA",
+                darkgrey: "#9F9F9F",
+                greyblue: "#545989",
+                lightblue: "#F0F4FD",
+              },
+            },
+            boxShadow: {
+              custom: "0px 4px 5px 0px rgba(0, 0, 0, 0.1)",
+              customblue: "0px 4px 4px 0px #164CD81A",
+              customhero: "0px 4px 10px 0px rgba(0, 0, 0, 0.1)",
+              customwhywe: "0px 4px 10px 0px rgba(0, 0, 0, 0.05)",
+              custominput: "0px 4px 10px 0px rgba(0, 0, 0, 0.25)",
+            },
+          },
         },
       };
     </script>
     <title>Logoipsum</title>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
   </head>
-  <body>
-    <header>
-      <img src="assets/Logo_main.webp" alt="logoipsum" title="logoipsum" />
-      <nav>
-        <ul>
-          <li>How it works</li>
-          <li>Why we</li>
-          <li>Pricing</li>
+  <body class="m-0 p-[60px] bg-primary-white">
+    <header class="flex w-full items-center justify-between">
+      <a href="#hero" class="mr-[60px]">
+        <img
+          src="assets/Logo_main.webp"
+          alt="logoipsum"
+          title="logoipsum"
+          width="197"
+          height="100"
+        />
+      </a>
+      <nav class="flex justify-center items-center">
+        <ul class="flex items-center">
+          <li
+            class="mx-[20px] font-[Montserrat] text-copy leading-[21.94px] font-medium text-primary-darkblack"
+          >
+            <a href="#howitworks">How it works</a>
+          </li>
+          <li
+            class="mx-[20px] font-[Montserrat] text-copy leading-[21.94px] font-medium text-primary-darkblack"
+          >
+            <a href="#whywe">Why we</a>
+          </li>
+          <li
+            class="mx-[20px] font-[Montserrat] text-copy leading-[21.94px] font-medium text-primary-darkblack"
+          >
+            <a href="#pricing">Pricing</a>
+          </li>
         </ul>
       </nav>
-      <div>
-        <button>Sign In</button>
-        <button>Start for free</button>
+      <div class="flex">
+        <button
+          class="mr-5 px-[24px] py-[10px] text-primary-blue border-[1px] border-secondary-lightgrey rounded-[16px] text-center active:bg-secondary-lightgrey hover:shadow-custom font-[Montserrat] text-copy font-medium"
+        >
+          Sign In
+        </button>
+        <button
+          class="text-primary-blue border-[1px] border-primary-blue px-[24px] py-[10px] rounded-[16px] font-[Montserrat] text-copy font-medium hover:bg-primary-blue hover:text-white hover:shadow-customblue"
+        >
+          Start for free
+        </button>
       </div>
     </header>
     <main>
-      <section id="hero">
-        <!-- buttons for absolute positioning -->
-        <div>
-          <button>Website</button>
-          <button>Email</button>
-          <button>Blog</button>
-          <button>Social media</button>
+      <section id="hero" class="my-[120px]">
+        <div
+          class="bg-[#3D11BB] absolute left-[114px] top-[328px] w-fit text-primary-white py-[10px] px-[24px] rounded-[16px] shadow-customhero leading-[21.94px] font-[Montserrat] font-medium text-copy"
+        >
+          Website
         </div>
-        
-        <h1>The fastest way to write copy for your content</h1>
-        <p>
-          Improve your writing with an AI-powered copywriter using GPT-4
-          technology to generate effective product listings in just seconds.
-        </p>
-        <div>
-          <button>
-            <img
-              src="assets/bolt_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24-2.ico"
-              alt="bolt"
-            />
-            <span>Start for free</span>
-          </button>
-          <button>
-            <img
-              src="assets/play_arrow_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24-1.ico"
-              alt="playarrow"
-            />
-            <span>Watch video</span>
-          </button>
+        <div
+          class="bg-[#358751] absolute left-[158px] top-[451px] w-fit text-primary-white py-[10px] px-[24px] rounded-[16px] shadow-customhero leading-[21.94px] font-[Montserrat] font-medium text-copy"
+        >
+          Email
         </div>
-        <h2>1,000+ users have used Logoipsum</h2>
-        <ul>
+        <div
+          class="bg-[#2554B1] absolute w-fit right-[177px] top-[354px] text-primary-white py-[10px] px-[24px] rounded-[16px] shadow-customhero leading-[21.94px] font-[Montserrat] font-medium text-copy"
+        >
+          Blog
+        </div>
+        <div
+          class="bg-[#EE9818] absolute w-fit right-[149px] top-[449px] text-primary-white py-[10px] px-[24px] rounded-[16px] shadow-customhero leading-[21.94px] font-[Montserrat] font-medium text-copy"
+        >
+          Social media
+        </div>
+        <div class="text-center w-[600px] mx-auto">
+          <h1
+            class="font-[Montserrat] font-semibold text-headline1 text-primary-darkblack leading-[58.51px]"
+          >
+            The fastest way to write copy for your
+            <span class="text-primary-blue">content</span>
+          </h1>
+          <p
+            class="my-[56px] font-[Montserrat] text-secondary-greyblue font-medium text-copy leading-[21.94px]"
+          >
+            Improve your writing with an AI-powered copywriter using GPT-4
+            technology to generate effective product listings in just seconds.
+          </p>
+          <div class="flex justify-center items-center">
+            <button
+              class="flex justify-center items-center mx-[20px] group active:bg-primary-white bg-primary-blue rounded-[16px] px-[24px] py-[10px] font-[Montserrat] font-medium text-copy text-primary-white hover:shadow-customblue"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="fill-current group-active:text-primary-blue"
+              >
+                <path
+                  d="M10.55 18.2L15.725 12H11.725L12.45 6.325L7.825 13H11.3L10.55 18.2ZM8 22L9 15H4L13 2H15L14 10H20L10 22H8Z"
+                  fill="currentColor"
+                />
+              </svg>
+              <span class="ml-[16px] group-active:text-primary-blue"
+                >Start for free</span
+              >
+            </button>
+            <button
+              class="flex justify-center items-center rounded-[16px] px-[24px] py-[10px] font-[Montserrat] font-medium text-copy text-primary-darkblack hover:shadow-custom border-[1px] border-secondary-lightgrey active:bg-secondary-lightgrey"
+            >
+              <img
+                src="assets/play_arrow_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24 1.svg"
+                alt="playarrow"
+                width="24"
+                height="24"
+              />
+              <span class="ml-[16px]">Watch video</span>
+            </button>
+          </div>
+        </div>
+        <h4
+          class="text-center mt-[120px] text-secondary-greyblue font-[Montserrat] font-semibold leading-[29.26px] text-headline4"
+        >
+          1,000+ users have used Logoipsum
+        </h4>
+        <ul class="list-none flex justify-around items-center w-full p-[36px]">
           <li>
-            <img src="assets/Logo_2.webp" alt="logo2" title="logo2" />
+            <img
+              src="assets/Logo_4.webp"
+              alt="logo4"
+              title="logo4"
+              width="167"
+              height="41"
+            />
+          </li>
+
+          <li>
+            <img
+              src="assets/Logo_5.webp"
+              alt="logo5"
+              title="logo5"
+              width="167"
+              height="44"
+            />
           </li>
           <li>
-            <img src="assets/Logo_3.webp" alt="logo3" title="logo3" />
+            <img
+              src="assets/Logo_6.webp"
+              alt="logo6"
+              title="logo6"
+              width="169"
+              height="40"
+            />
           </li>
           <li>
-            <img src="assets/Logo_4.webp" alt="logo4" title="logo4" />
+            <img
+              src="assets/Logo_2.webp"
+              alt="logo2"
+              title="logo2"
+              width="168"
+              height="41"
+            />
           </li>
           <li>
-            <img src="assets/Logo_5.webp" alt="logo5" title="logo5" />
-          </li>
-          <li>
-            <img src="assets/Logo_6.webp" alt="logo6" title="logo6" />
+            <img
+              src="assets/Logo_3.webp"
+              alt="logo3"
+              title="logo3"
+              width="170"
+              height="41"
+            />
           </li>
         </ul>
       </section>
-      <section id="whywe">
-        <div>
-          <h3>Why we?</h3>
-          <p>
+      <section id="whywe" class="mb-[120px]">
+        <div class="flex w-full justify-between items-center mb-[60px]">
+          <h2
+            class="text-headline2 w-[82%] text-primary-darkblack font-semibold leading-[48.76px] font-[Montserrat]"
+          >
+            Why we?
+          </h2>
+          <p
+            class="text-secondary-greyblue text-copy font-[Montserrat] leading-[21.94px] font-medium"
+          >
             Choose us for fast, tailored copywriting powered by GPT-4
             technology, delivering high-quality results that save you time and
             drive success.
           </p>
         </div>
-        <div>
-          <div>
-            <h4>Describe your request</h4>
+        <div
+          class="bg-secondary-lightblue rounded-[24px] p-[24px] shadow-customwhywe"
+        >
+          <div
+            class="bg-primary-white rounded-[16px] px-[24px] py-[25px] shadow-customwhywe"
+          >
+            <h4
+              class="font-medium font-[Montserrat] leading-[29.26px] text-primary-darkblack text-headline4"
+            >
+              Describe your request
+            </h4>
             <textarea
               placeholder="e.g. “Write a content plan for...”"
+              class="mt-[36px] rounded-[16px] p-[16px] border-[1px] border-secondary-darkgrey w-full resize-none h-[150px] font-[Montserrat] text-copy font-medium text-primary-darkblack"
             ></textarea>
           </div>
         </div>
-        <button>
-          <img
-            src="assets/bolt_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24-2.ico"
-            alt="bolt"
-          />
-          <span>Generate copy</span>
+        <button
+          class="flex mt-[60px] min-w-[374px] justify-center items-center mx-auto group active:bg-primary-white bg-primary-blue rounded-[16px] px-[24px] py-[10px] font-[Montserrat] font-medium text-copy text-primary-white hover:shadow-customblue"
+        >
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="fill-current group-active:text-primary-blue"
+          >
+            <path
+              d="M10.55 18.2L15.725 12H11.725L12.45 6.325L7.825 13H11.3L10.55 18.2ZM8 22L9 15H4L13 2H15L14 10H20L10 22H8Z"
+              fill="currentColor"
+            />
+          </svg>
+          <span class="ml-[16px] group-active:text-primary-blue"
+            >Generate copy</span
+          >
         </button>
       </section>
-      <section id="howitworks">
-        <h3>How it works?</h3>
-        <div>
-          <div>
-            <div>
-              <ul>
-                <li>Social</li>
-                <li>E-Commerce</li>
-                <li>Blogs</li>
-                <li>Website</li>
-                <li>Seo</li>
-                <li>Digital ads</li>
-                <li>Sales</li>
-                <li>Email</li>
-                <li>Business</li>
+      <section id="howitworks" class="mb-[120px]">
+        <h2
+          class="text-headline2 text-primary-darkblack font-semibold leading-[48.76px] font-[Montserrat]"
+        >
+          How it works?
+        </h2>
+        <div
+          class="bg-secondary-lightblue rounded-[24px] p-[56px] shadow-customwhywe my-[60px]"
+        >
+          <div class="grid grid-cols-2 place-items-center">
+            <div
+              class="bg-primary-white rounded-[16px] px-[24px] py-[25px] shadow-customwhywe w-fit max-w-[374px]"
+            >
+              <ul class="list-none flex flex-wrap justify-center items-center">
+                <li
+                  class="rounded-[16px] m-1 p-[10px] border-[1px] border-secondary-lightgrey font-medium font-[Montserrat] text-copy leading-[21.94px]"
+                >
+                  Social
+                </li>
+                <li
+                  class="rounded-[16px] m-1 p-[10px] border-[1px] border-secondary-lightgrey font-medium font-[Montserrat] text-copy leading-[21.94px]"
+                >
+                  E-Commerce
+                </li>
+                <li
+                  class="rounded-[16px] m-1 p-[10px] border-[1px] border-secondary-lightgrey font-medium font-[Montserrat] text-copy leading-[21.94px]"
+                >
+                  Blogs
+                </li>
+                <li
+                  class="rounded-[16px] m-1 p-[10px] border-[1px] border-secondary-lightgrey font-medium font-[Montserrat] text-copy leading-[21.94px]"
+                >
+                  Website
+                </li>
+                <li
+                  class="rounded-[16px] m-1 p-[10px] border-[1px] border-secondary-lightgrey font-medium font-[Montserrat] text-copy leading-[21.94px]"
+                >
+                  Seo
+                </li>
+                <li
+                  class="rounded-[16px] m-1 p-[10px] border-[1px] border-secondary-lightgrey font-medium font-[Montserrat] text-copy leading-[21.94px]"
+                >
+                  Digital ads
+                </li>
+                <li
+                  class="rounded-[16px] m-1 p-[10px] border-[1px] border-secondary-lightgrey font-medium font-[Montserrat] text-copy leading-[21.94px]"
+                >
+                  Sales
+                </li>
+                <li
+                  class="rounded-[16px] m-1 p-[10px] border-[1px] border-secondary-lightgrey font-medium font-[Montserrat] text-copy leading-[21.94px]"
+                >
+                  Email
+                </li>
+                <li
+                  class="rounded-[16px] m-1 p-[10px] border-[1px] border-secondary-lightgrey font-medium font-[Montserrat] text-copy leading-[21.94px]"
+                >
+                  Business
+                </li>
               </ul>
             </div>
             <div>
-              <h4>Select a writing tool</h4>
-              <p>
+              <h3
+                class="font-medium text-headline3 font-[Montserrat] leading-[43.88px] text-primary-darkblack"
+              >
+                Select a writing tool
+              </h3>
+              <p
+                class="text-copy mt-[20px] font-[Montserrat] font-medium leading-[21.94px] text-primary-darkblack"
+              >
                 Choode from a wide array of AI to write social media adsm
                 website, blop post.
               </p>
             </div>
           </div>
         </div>
-        <div>
-          <button>
-            <img
-              src="assets/bolt_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24-2.ico"
-              alt="bolt"
-            />
-            <span>Generate copy</span>
+        <div class="flex items-center justify-center">
+          <button
+            class="flex justify-center mx-[20px] items-center group active:bg-primary-white bg-primary-blue rounded-[16px] px-[24px] py-[10px] font-[Montserrat] font-medium text-copy text-primary-white hover:shadow-customblue"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="fill-current group-active:text-primary-blue"
+            >
+              <path
+                d="M10.55 18.2L15.725 12H11.725L12.45 6.325L7.825 13H11.3L10.55 18.2ZM8 22L9 15H4L13 2H15L14 10H20L10 22H8Z"
+                fill="currentColor"
+              />
+            </svg>
+            <span class="ml-[16px] group-active:text-primary-blue"
+              >Generate copy</span
+            >
           </button>
-          <button>
+          <button
+            class="flex justify-center items-center rounded-[16px] px-[24px] py-[10px] font-[Montserrat] font-medium text-copy text-primary-darkblack hover:shadow-custom border-[1px] border-secondary-lightgrey active:bg-secondary-lightgrey"
+          >
             <img
-              src="assets/play_arrow_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24-1.ico"
+              src="assets/play_arrow_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24 1.svg"
               alt="playarrow"
+              width="24"
+              height="24"
             />
-            <span>Watch video</span>
+            <span class="ml-[16px]">Watch video</span>
           </button>
         </div>
-        <div>
-          <h3>Generate copy quickly and easily</h3>
-          <div>
-            <p>
+      </section>
+      <section id="copy" class="mb-[120px]">
+        <div class="flex w-full mb-[60px]">
+          <h2
+            class="text-headline2 w-[65%] text-primary-darkblack font-semibold leading-[48.76px] font-[Montserrat]"
+          >
+            Generate copy quickly and easily
+          </h2>
+          <div class="ml-[60px]">
+            <p
+              class="text-secondary-greyblue text-copy font-[Montserrat] leading-[21.94px] font-medium"
+            >
               Our AI generator is streamline the copywriting process, allowing
               you to generate high-quality content with just a few clicks.
             </p>
-            <button>Install plugin</button>
+            <button
+              class="px-[24px] py-[10px] rounded-[16px] text-primary-white bg-primary-blue font-[Montserrat] font-medium text-copy hover:shadow-customblue mt-[30px]"
+            >
+              Install plugin
+            </button>
           </div>
         </div>
-        <div>
-          <img
-            src="assets/Знімок-екрана-2024-09-28-о-14.17.40-1.webp"
-            alt="screenshot"
-            title="screenshot"
-          />
-        </div>
+        <img
+          src="assets/screen-plugin-Figma.avif"
+          alt="screenshot"
+          title="screenshot"
+          class="w-full"
+          width="1160"
+          height="463"
+        />
       </section>
-      <section id="pricing">
-        <h3>Choose a pricing plan</h3>
-        <ul>
-          <li>
+      <section id="pricing" class="mb-[120px]">
+        <h2
+          class="text-headline2 w-[65%] text-primary-darkblack font-semibold leading-[48.76px] font-[Montserrat]"
+        >
+          Choose a pricing plan
+        </h2>
+        <ul class="list-none mt-[60px] grid grid-cols-3 gap-[56px]">
+          <li class="bg-secondary-lightblue rounded-[16px] p-[24px]">
             <div>
-              <h5>Starter</h5>
-              <h6>Start with 1,500 word limit</h6>
+              <h4
+                class="text-headline4 text-primary-darkblack font-medium font-[Montserrat] leading-[29.26px]"
+              >
+                Starter
+              </h4>
+              <p
+                class="text-copy font-[Montserrat] font-medium text-secondary-darkgrey leading-[21.94px]"
+              >
+                Start with 1,500 word limit
+              </p>
             </div>
-            <h4>$0<sub>/mo</sub></h4>
-            <ul>
-              <li>
+            <h2
+              class="my-[36px] text-headline2 font-[Montserrat] font-semibold leading-[48.76px] text-primary-darkblack"
+            >
+              $0<sub
+                class="text-copy text-secondary-darkgrey font-medium leading-[21.94px]"
+                >/mo</sub
+              >
+            </h2>
+            <ul class="list-none flex flex-col mb-[36px]">
+              <li class="flex items-center gap-[8px]">
                 <img
-                  src="assets/check_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24-1.ico"
+                  src="assets/check_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24 1.svg"
                   alt="check"
                 />
-                <span>1 language</span>
+                <span
+                  class="font-[Montserrat] font-medium text-copy leading-[21.94px]"
+                  >1 language</span
+                >
               </li>
-              <li>
+              <li class="flex items-center gap-[8px]">
                 <img
-                  src="assets/check_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24-1.ico"
+                  src="assets/check_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24 1.svg"
                   alt="check"
                 />
-                <span>2 copywriting tools</span>
+                <span
+                  class="font-[Montserrat] font-medium text-copy leading-[21.94px]"
+                  >2 copywriting tools</span
+                >
               </li>
-              <li>
+              <li class="flex items-center gap-[8px]">
                 <img
-                  src="assets/check_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24-1.ico"
+                  src="assets/check_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24 1.svg"
                   alt="check"
                 />
-                <span>unlimited projects</span>
+                <span
+                  class="font-[Montserrat] font-medium text-copy leading-[21.94px]"
+                  >unlimited projects</span
+                >
               </li>
             </ul>
-            <button>Start for free</button>
+            <a
+              href="https://buy.stripe.com/test_dR6dR48un1NAanCcMM"
+              target="_blank"
+            >
+              <button
+                class="text-primary-blue w-full border-[1px] border-primary-blue px-[24px] py-[10px] rounded-[16px] font-[Montserrat] text-copy font-medium hover:bg-primary-blue hover:text-white hover:shadow-customblue"
+              >
+                Start for free
+              </button>
+            </a>
           </li>
-          <li>
+          <li class="bg-secondary-lightblue rounded-[16px] p-[24px]">
             <div>
-              <h5>Starter</h5>
-              <h6>Start with 1,500 word limit</h6>
+              <h4
+                class="text-headline4 text-primary-darkblack font-medium font-[Montserrat] leading-[29.26px]"
+              >
+                Starter
+              </h4>
+              <p
+                class="text-copy font-[Montserrat] font-medium text-secondary-darkgrey leading-[21.94px]"
+              >
+                Start with 1,500 word limit
+              </p>
             </div>
-            <h4>$0<sub>/mo</sub></h4>
-            <ul>
-              <li>
+            <h2
+              class="my-[36px] text-headline2 font-[Montserrat] font-semibold leading-[48.76px] text-primary-darkblack"
+            >
+              $0<sub
+                class="text-copy text-secondary-darkgrey font-medium leading-[21.94px]"
+                >/mo</sub
+              >
+            </h2>
+            <ul class="list-none flex flex-col mb-[36px]">
+              <li class="flex items-center gap-[8px]">
                 <img
-                  src="assets/check_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24-1.ico"
+                  src="assets/check_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24 1.svg"
                   alt="check"
                 />
-                <span>1 language</span>
+                <span
+                  class="font-[Montserrat] font-medium text-copy leading-[21.94px]"
+                  >1 language</span
+                >
               </li>
-              <li>
+              <li class="flex items-center gap-[8px]">
                 <img
-                  src="assets/check_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24-1.ico"
+                  src="assets/check_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24 1.svg"
                   alt="check"
                 />
-                <span>2 copywriting tools</span>
+                <span
+                  class="font-[Montserrat] font-medium text-copy leading-[21.94px]"
+                  >2 copywriting tools</span
+                >
               </li>
-              <li>
+              <li class="flex items-center gap-[8px]">
                 <img
-                  src="assets/check_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24-1.ico"
+                  src="assets/check_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24 1.svg"
                   alt="check"
                 />
-                <span>unlimited projects</span>
+                <span
+                  class="font-[Montserrat] font-medium text-copy leading-[21.94px]"
+                  >unlimited projects</span
+                >
               </li>
             </ul>
-            <button>Start for free</button>
+            <a
+              href="https://buy.stripe.com/test_dR6dR48un1NAanCcMM"
+              target="_blank"
+            >
+              <button
+                class="text-primary-blue w-full border-[1px] border-primary-blue px-[24px] py-[10px] rounded-[16px] font-[Montserrat] text-copy font-medium hover:bg-primary-blue hover:text-white hover:shadow-customblue"
+              >
+                Start for free
+              </button>
+            </a>
           </li>
-          <li>
+          <li class="bg-secondary-lightblue rounded-[16px] p-[24px]">
             <div>
-              <h5>Starter</h5>
-              <h6>Start with 1,500 word limit</h6>
+              <h4
+                class="text-headline4 text-primary-darkblack font-medium font-[Montserrat] leading-[29.26px]"
+              >
+                Starter
+              </h4>
+              <p
+                class="text-copy font-[Montserrat] font-medium text-secondary-darkgrey leading-[21.94px]"
+              >
+                Start with 1,500 word limit
+              </p>
             </div>
-            <h4>$0<sub>/mo</sub></h4>
-            <ul>
-              <li>
+            <h2
+              class="my-[36px] text-headline2 font-[Montserrat] font-semibold leading-[48.76px] text-primary-darkblack"
+            >
+              $0<sub
+                class="text-copy text-secondary-darkgrey font-medium leading-[21.94px]"
+                >/mo</sub
+              >
+            </h2>
+            <ul class="list-none flex flex-col mb-[36px]">
+              <li class="flex items-center gap-[8px]">
                 <img
-                  src="assets/check_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24-1.ico"
+                  src="assets/check_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24 1.svg"
                   alt="check"
                 />
-                <span>1 language</span>
+                <span
+                  class="font-[Montserrat] font-medium text-copy leading-[21.94px]"
+                  >1 language</span
+                >
               </li>
-              <li>
+              <li class="flex items-center gap-[8px]">
                 <img
-                  src="assets/check_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24-1.ico"
+                  src="assets/check_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24 1.svg"
                   alt="check"
                 />
-                <span>2 copywriting tools</span>
+                <span
+                  class="font-[Montserrat] font-medium text-copy leading-[21.94px]"
+                  >2 copywriting tools</span
+                >
               </li>
-              <li>
+              <li class="flex items-center gap-[8px]">
                 <img
-                  src="assets/check_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24-1.ico"
+                  src="assets/check_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24 1.svg"
                   alt="check"
                 />
-                <span>unlimited projects</span>
+                <span
+                  class="font-[Montserrat] font-medium text-copy leading-[21.94px]"
+                  >unlimited projects</span
+                >
               </li>
             </ul>
-            <button>Start for free</button>
+            <a
+              href="https://buy.stripe.com/test_dR6dR48un1NAanCcMM"
+              target="_blank"
+            >
+              <button
+                class="text-primary-blue w-full border-[1px] border-primary-blue px-[24px] py-[10px] rounded-[16px] font-[Montserrat] text-copy font-medium hover:bg-primary-blue hover:text-white hover:shadow-customblue"
+              >
+                Start for free
+              </button>
+            </a>
           </li>
         </ul>
       </section>
     </main>
     <footer>
-      <div>
-        <h3>Brainstorm. write</h3>
-        <button>
-          <img
-            src="assets/bolt_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24-2.ico"
-            alt="bolt"
-          />
-          <span>Generate for free</span>
+      <div class="flex justify-between">
+        <h2
+          class="text-headline2 w-[65%] text-primary-darkblack font-semibold leading-[48.76px] font-[Montserrat]"
+        >
+          Brainstorm. write
+        </h2>
+        <button
+          class="flex justify-center mx-[20px] items-center group active:bg-primary-white bg-primary-blue rounded-[16px] px-[24px] py-[10px] font-[Montserrat] font-medium text-copy text-primary-white hover:shadow-customblue"
+        >
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="fill-current group-active:text-primary-blue"
+          >
+            <path
+              d="M10.55 18.2L15.725 12H11.725L12.45 6.325L7.825 13H11.3L10.55 18.2ZM8 22L9 15H4L13 2H15L14 10H20L10 22H8Z"
+              fill="currentColor"
+            />
+          </svg>
+          <span class="ml-[16px] group-active:text-primary-blue"
+            >Generate for free</span
+          >
         </button>
       </div>
-      <div>
-        <div>
-          <img src="assets/Logo_main.webp" alt="logoipsum" title="logoipsum" />
-          <p>
+      <div class="grid grid-cols-2 mt-[56px]">
+        <div class="w-[60%]">
+          <img
+            src="assets/Logo_main.webp"
+            alt="logoipsum"
+            title="logoipsum"
+            class="mb-[36px]"
+            width="197"
+            height="40"
+          />
+          <p
+            class="text-copy text-secondary-greyblue font-[Montserrat] font-medium leading-[21.94px]"
+          >
             Automatically generate blog articles, websites copy, landing pages &
             digital ads for your business in seconds.
           </p>
         </div>
-        <div>
-          <h4>Subscribe</h4>
-          <p>Join our bewsletter to stay up date on features and realeses.</p>
-          <div>
-            <input placeholder="Enter your email" />
-            <button>Subscribe</button>
+        <div class="w-full">
+          <h4
+            class="text-headline4 font-medium font-[Montserrat] leading-[29.26px]"
+          >
+            Subscribe
+          </h4>
+          <p
+            class="mt-[20px] mb-[36px] text-copy text-secondary-greyblue font-[Montserrat] font-medium leading-[21.94px]"
+          >
+            Join our bewsletter to stay up date on features and realeses.
+          </p>
+          <div class="gap-[22px] flex w-full items-center">
+            <input
+              placeholder="Enter your email"
+              class="shadow-custominput w-full border-[1px] border-secondary-darkgrey p-[16px] rounded-[16px] text-copy font-[Montserrat] text-primary-darkblack font-medium leading-[21.94px]"
+            />
+            <button
+              class="px-[24px] py-[14px] min-w-[175px] rounded-[16px] text-primary-white bg-primary-blue font-[Montserrat] font-medium text-copy hover:shadow-customblue"
+            >
+              Subscribe
+            </button>
           </div>
         </div>
       </div>
